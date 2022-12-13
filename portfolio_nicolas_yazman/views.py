@@ -9,3 +9,6 @@ def update_server(request):
     origin.pull()
     return HttpResponse('Updated Server with the latest Git code')
 
+@csrf_exempt
+def home_page(request):
+    return HttpResponse('Home page.')
