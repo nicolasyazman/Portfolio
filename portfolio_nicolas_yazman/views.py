@@ -11,4 +11,4 @@ def update_server(request):
 
 @csrf_exempt
 def home_page(request):
-    return HttpResponse('Home page.')
+    return HttpResponse('Home page. Hello world and welcome!')
