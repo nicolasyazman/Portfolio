@@ -4,7 +4,7 @@ import git
 
 @csrf_exempt
 def update_server(request):
-    repo = git.Repo('https://github.com/nicolasyazman/Portfolio.git')
+    repo = git.Repo('Portfolio')
     origin = repo.remotes.origin
     origin.pull()
     return HttpResponse('Updated Server with the latest Git code')
