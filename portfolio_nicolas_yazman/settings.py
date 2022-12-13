@@ -126,3 +126,8 @@ MEDIA_ROOT = '/home/nicolasyazman/portfolio_nicolas_yazman/media'
 MEDIA_URL = '/media/'
 STATIC_ROOT = '/home/nicolasyazman/portfolio_nicolas_yazman/static'
 STATIC_URL = '/static/'
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
