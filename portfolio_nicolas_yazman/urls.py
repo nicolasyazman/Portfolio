@@ -20,5 +20,5 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('update_server/', views.hello, name='updating_server'),
+    path('update_server/', views.update_server, name='updating_server'),
 ]
