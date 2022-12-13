@@ -21,6 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
+
 DEBUG = True
 
 ALLOWED_HOSTS = ['nicolasyazman.pythonanywhere.com']
@@ -122,12 +128,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # default static files settings for PythonAnywhere.
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
-MEDIA_ROOT = '/home/nicolasyazman/portfolio_nicolas_yazman/media'
+MEDIA_ROOT = '/home/nicolasyazman/Portfolio/media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = '/home/nicolasyazman/portfolio_nicolas_yazman/static'
+STATIC_ROOT = '/home/nicolasyazman/Portfolio/static'
 STATIC_URL = '/static/'
-
-try:
-    from local_settings import *
-except ImportError:
-    pass
